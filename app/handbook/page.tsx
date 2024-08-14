@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Sidebar, { SidebarItem } from '../components/handbook/Sidebar'
 import ListOfContent from '../components/handbook/ListOfContent'
 
-const handbook = () => {
+export default function handbook() {
     const [content, setContent] = useState("")
     const handleContent = (store: string) => {
         setContent(store)
@@ -25,4 +25,3 @@ const handbook = () => {
     )
 }
 
-export default handbook
