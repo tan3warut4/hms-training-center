@@ -1,6 +1,11 @@
 import SearchBar from "./SearchBar";
+import { ReactNode } from "react";
 
-export default function Sidebar({ children }) {
+interface SidebarProps {
+    children: ReactNode
+}
+
+export default function Sidebar({ children }: SidebarProps) {
     return (
         <aside className="h-screen mt-7">
             <nav className="h-full flex flex-col bg-white border-r shadow-sm max-w-[19rem]  px-4">
@@ -15,7 +20,16 @@ export default function Sidebar({ children }) {
         </aside>
     )
 }
-export function SidebarItem({ icon, text, active, alert }) {
+
+interface SidebarItemProps {
+    icon: string;
+    text: string;
+    active?: true;
+    onClick: () => void;
+}
+
+export function SidebarItem({ icon, text, active }: SidebarItemProps) {
+
     return (
         <li className={`
             relative flex items-center py-2 px-3 my-1 font-medium rounded-md cursor-pointer 
@@ -29,11 +43,6 @@ export function SidebarItem({ icon, text, active, alert }) {
             <span
                 className="w-52 ml-3 text-slate-600 text-sm"
             >{text}</span>
-            {alert && (
-                <div className={`absolute right-2 w-2 h-2 rounded bg-indigo-400`}>
-
-                </div>
-            )}
         </li>
     )
 }
