@@ -4,7 +4,7 @@ import Sidebar, { SidebarItem } from '../components/handbook/Sidebar'
 import ListOfContent from '../components/handbook/ListOfContent'
 
 const handbook = () => {
-    const [content, setContent] = useState("Bristot")
+    const [content, setContent] = useState("")
     const handleContent = (store: string) => {
         setContent(store)
     }
