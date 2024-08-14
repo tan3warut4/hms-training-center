@@ -1,4 +1,9 @@
-export default function ListOfContent({ children }) {
+import { ReactNode } from "react";
+
+interface ListOfContentProps {
+    children: ReactNode;
+}
+export default function ListOfContent({ children }: ListOfContentProps) {
     return (
         <aside className="absolute top-0 right-0 
         w-[18rem] border-l  h-screen
