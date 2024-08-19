@@ -1,5 +1,11 @@
+import Button from "./Button"
 
 export default function SimulatorScreen({ data, store }) {
+    const renderTopCategoryButton = (data) => {
+        data.map(() => {
+
+        })
+    }
     const renderSideBlock = () => {
         let boxAmount = 11
         return (
@@ -18,7 +24,13 @@ export default function SimulatorScreen({ data, store }) {
         <div className="flex justify-center mt-4">
             <div className="w-[900px] h-[550px] border-black border-[2vw] rounded-xl bg-blue-900">
                 <div className="w-full bg bg-slate-300 flex justify-center text-xs">{store}</div>
-                <div className="bg-black h-[60px]">Top Section</div>
+                <div className="bg-black h-[50px]">
+                    <div className="flex justify-between">
+                        <Button label={"Test Button"} type={"menu"} />
+                        <Button label={"Test Button"} type={"menu"} />
+                        <Button label={"Test Button"} type={"menu"} />
+                    </div>
+                </div>
                 <div className="h-[355px] flex w-full bg-slate-300">
                     <div className="w-[225px] bg-white flex">
                         <div className="w-[90%] bg-white">
@@ -40,7 +52,11 @@ export default function SimulatorScreen({ data, store }) {
                             {renderSideBlock()}
                         </div>
                     </div>
-                    <div className="w-[595px]">Middle</div>
+                    <div className="w-[595px]">
+                        <div>
+                            Middle Section
+                        </div>
+                    </div>
                     <div className="w-[80px] bg-slate-500" >category</div>
                 </div>
                 <div>
