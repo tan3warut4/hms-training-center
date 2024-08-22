@@ -1,11 +1,8 @@
 import Button from "./Button"
 
-export default function SimulatorScreen({ data, store }) {
-    const renderTopCategoryButton = (data) => {
-        data.map(() => {
 
-        })
-    }
+
+export default function SimulatorScreen() {
     const renderSideBlock = () => {
         let boxAmount = 11
         return (
@@ -23,7 +20,7 @@ export default function SimulatorScreen({ data, store }) {
     return (
         <div className="flex justify-center mt-4">
             <div className="w-[900px] h-[550px] border-black border-[2vw] rounded-xl bg-blue-900">
-                <div className="w-full bg bg-slate-300 flex justify-center text-xs">{store}</div>
+                <div className="w-full bg bg-slate-300 flex justify-center text-xs"></div>
                 <div className="bg-black h-[50px]">
                     <div className="flex justify-between">
                         <Button label={"Test Button"} type={"menu"} />
